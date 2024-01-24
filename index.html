@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <img src="imgs/logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>    University Student</p>
+            <h1>Hello! My Name is<br><span>Sriram</span> Ranganathan.</h1>
+        </div>
+    </div>
+</div>
+<!--about section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="imgs/aboutme.PNG" alt="about image">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Welcome to my website! I am currently a 3rd Year undergraduate student at Miami University - 
+                    Oxford, OH pursuing a B.S. in Computer Science, as well as a minor in philosophy and statistical methods. 
+                    I am primarily interested in cybersecurity and am seeking to build a career in the field in the coming years. 
+                    To this effect, I am currently searching for an internship position for the Summer of 2024;
+                    I am open to exploring all career paths within the field as I still have a lot to learn and have no intention of confining myself to any one role. 
+                    As I continue to broaden my cybersecurity and computer science skills, it is my goal to showcase and document my progress on this site.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('courses')">Coursework</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience/Positions</p>
+                        <p class="tab-links" onclick="opentab('achievements')" >Achievements</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="courses">
+                        <ul>
+                            <li><span>CYB 134</span><br>Introduction to Cybersecurity</li>
+                            <li><span>CYB 234</span><br>System Administration and Scripting (Linux/BASH)</li>
+                            <li><span>CSE 235 (In Progress)</span><br>Computer Networks</li>
+                            <li><span>CSE 174</span><br>Fundamentals of Programming and Problem Solving (Java)</li>
+                            <li><span>CSE 201</span><br>Intro to Software Engineering (C++)</li>
+                            <li><span>CSE 271</span><br>Object-Oriented Programming (Java)</li>
+                            <li><span>CSE 274</span><br>Data Abstraction and Data Structures (Java)</li>
+                            <li><span>CSE 278</span><br>Systems I (C++)</li>
+                            <li><span>CSE 374</span><br>Algorithms I (Java)</li>
+                            <li><span>CSE 381</span><br>Systems II (C++)</li>
+                            <li><span>CSE 383</span><br>Web Application Programming (Java)</li>
+                            <li><span>CSE 386</span><br>Foundations of Computer Graphics and Games (C++)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Cybersecurity Tools and Fundamentals</span><br>Strong grasp of cybersecurity fundamentals as well as a working knowledge of industry standard tools such as Nmap, Wireshark, BurpSuite, and more.</li>
+                            <li><span>Programming and Problem Solving</span><br>Experience with Java, C++, R, BASH Scripts, and actively learning Python.</li>
+                            <li><span>Team Player</span><br>Extremely effective communicator and positive team presence. I can adapt well to my environment and the flow of those around me.</li>
+                            <li><span>Passionate</span><br>Constant desire to learn and grow; always open to critism and advice from others to improve every day.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>MUCSC Event Coordinator (Nov 2023 - Present)</span><br>On executive team as the event coordinator for the Miami University Cybersecurity Club. Duties involve documenting club events and meetings as well as aiding the executive team in coming up with content to be taught and discussed.</li>
+                            <li><span>Research Assistant (Sep 2023 - Present)</span><br>Working alongside a professor to conduct research on privacy and security within federated learning environments; currently familiarizing myself with PyTorch to conduct tests of the efficacy of common attacks and defenses being used.</li>
+                            <li><span>Tour Guide (Aug 2022 - Present)</span><br>Currently employed as a Miami University Tour Guide, working to promote the university to potential incoming students. This job has helped me to be confident, well-spoken, and approachable to all kinds of people.</li>
+                            <li><span>Youth Group Coordinator (Jun 2020 - Aug 2020)</span><br>Employed by SPEF, a nonprofit organization local to my hometown of Stamford, CT. My job was to help organize and coordinate activities to create engaging extracurricular learning experiences for children.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="achievements">
+                        <ul>
+                            <li><span>Miami University Dean's List (Fall 2023)</span><br>Awarded a spot on the Fall 2023 Semester Miami University Dean's List for achieving a GPA of 3.73, placing me in the top 20% of undergraduate students.</li>
+                            <li><span>THM Pre Security Certification (2023)</span><br>Completed the TryHackMe Pre Security online certification.</li>
+                            <li><span>THM Introduction to Cybersecurity Certification (2023)</span><br>Completed the TryHackMe Introduction to Cybersecurity online certification.</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+    
+</body>
+</html>

@@ -130,3 +130,7 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+
+.contact-left{
+    flex-basis: 35%;
+}

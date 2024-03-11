@@ -21,7 +21,8 @@ body{
 }
 nav{
     position: fixed;
-    padding-right: 650px;
+    top: 0px;
+    padding-right: 450px;
     display: flex;
     align-items: center;
     justify-content: space-between;
